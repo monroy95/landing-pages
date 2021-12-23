@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  background: #f2f2f2;
+}
+
+.nav {
+  background: purple;
+  height: 70px;
+  padding-top: 0 50px;
+  text-align: right;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.enlaces {
+  color: #fff;
+  text-decoration: none;
+  /* Debe tener el mismo valor que su padre en este caso .nav height */
+  line-height: 70px;
+  padding: 0 20px;
+  display: inline-block;
+}
+
+.enlaces:hover {
+  background: #fff;
+  color: purple;
+  font-style: bold;
+}
+
+.section {
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+.title {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  line-height: 100vh;
+}
+
+/* El nav al tener un posicionamiento fixed se sobre pone al primer section, por lo que 
+al primer elemento seccion hay que sumarle 70px que es su alto */
+.section:nth-of-type(1) {
+  margin-top: 70px;
+  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+.section:nth-of-type(2) {
+  background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+}
+.section:nth-of-type(3) {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
